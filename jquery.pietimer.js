@@ -109,7 +109,8 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
                 if (this.current_value <= 0) {
                     clearInterval(this.interval_id);
-
+			//reset accrued_time, if start again, it work correctly
+			this.accrued_time = 0;
                     // This is a total hack to clear the canvas. It would be
                     // better to fill the canvas with the background color
                     this.canvas.width = this.settings.width;
